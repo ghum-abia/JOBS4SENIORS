@@ -11,7 +11,7 @@ function footer() {
         <div className='lg:w-[484px] grid sm:place-content-center sm:pt-[30px   ] '>
         
             <div className='font-bold lg:text-[40px] text-[#F5F5F5] '>
-            Ready to Begin Your Next Chapter?
+            Ready to Begin Your Next Chapter?Edit
             </div>
             <div className='font-normal text-[20px] text-[#F5F5F5] pt-5'>
             Don’t let retirement slow you down. Keep learning, stay connected, and earn remotely with Jobs for Seniors.
