@@ -62,7 +62,7 @@ export default function SidebarFilter ({ applyFilters }) {
         });
       };
   return (
-    <div className="w-59  p-4  rounded-2xl shadow-md bg-white ">
+    <div className="w-75  p-4  rounded-2xl shadow-md bg-white ">
     
 
       {/* Experience Level */}
@@ -106,7 +106,7 @@ export default function SidebarFilter ({ applyFilters }) {
       {/* Apply Button */}
       <button
         onClick={() => applyFilters(tempFilters)}
-        className=" bg-green-700 text-white px-8 py-2  cursor-pointer m-auto rounded-lg grid place-content-center center hover:bg-green-800 transition"
+        className=" bg-[#15411F] text-white px-8 py-2  cursor-pointer m-auto rounded-lg grid place-content-center center hover:bg-green-800 transition"
       >
         Apply
       </button>

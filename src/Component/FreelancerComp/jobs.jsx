@@ -21,6 +21,7 @@ function jobs() {
 
   const [filteredJobs, setFilteredJobs] = useState(jobListings);
   const [searchTerm, setSearchTerm] = useState("");
+  const [bookmarkedJobs, setBookmarkedJobs] = useState([]);
 
 
  // Search only filters job titles
@@ -47,6 +48,13 @@ function jobs() {
     setFilteredJobs(filteredResults);
   };
 
+
+    // Function to bookmark jobs
+    const bookmarkJob = (job) => {
+      if (!bookmarkedJobs.some((savedJob) => savedJob.id === job.id)) {
+        setBookmarkedJobs([...bookmarkedJobs, job]);
+      }
+    };
 
   return (
     <div>
@@ -98,12 +106,12 @@ function jobs() {
       <div>
         {/* <Button className='{text-red-500 bg-red-500}' variant="contained" >click me</Button> */}
 
-        <div className="flex">
+        <div className="flex w-full">
       <SidebarFilter applyFilters={applyFilters} />
       {searchTerm ? (
-          <JobList filteredJobs={searchResults} />
+          <JobList  filteredJobs={searchResults}  bookmarkJob={bookmarkJob} />
         ) : (
-          <JobList filteredJobs={filteredJobs} />
+          <JobList filteredJobs={filteredJobs} bookmarkJob={bookmarkJob} />
         )}
     </div>
       </div>

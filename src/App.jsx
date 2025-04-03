@@ -12,6 +12,10 @@ import RecuiterDashoard from './page/RecuiterPage/RecuiterDashoard.jsx';
 import Proposal from './page/FreelancerPage/Proposal.jsx';
 import ProposalDetail from './page/FreelancerPage/ProposalDetails.jsx';
 import Job from './page/FreelancerPage/Job.jsx';
+import JobDetail from './page/FreelancerPage/JobDetails.jsx';
+import Bookmark from './page/FreelancerPage/Bookmark.jsx';
+import SendProposals from './page/FreelancerPage/SendProposal.jsx';
+
 
 
 import './App.css'
@@ -35,7 +39,10 @@ function App() {
               <Route path="/Forgetpassword" element={<Forgetpassword />} />
               <Route path="/Proposal" element={<Proposal />} />
               <Route path="/proposal/:slug" element={<ProposalDetail />} />
+              <Route  path="/Job/:id" element={<JobDetail />} />
+              <Route path="/SendProposal/:id" element={<SendProposals />} />
               <Route path="/Job" element={<Job />} />
+              <Route path="/Bookmark" element={<Bookmark   />} />
 
             </Routes>
         </BrowserRouter>

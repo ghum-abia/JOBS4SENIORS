@@ -54,10 +54,12 @@ function DashboardSidebar() {
                     <TiUserAddOutline  className='' size={20} />
                    <li className=" pl-3 ">Find colleagues</li>
                    </div>
+                   <Link to='/Bookmark'>
                    <div className='flex  hover:bg-gray-200 rounded-md font-normal text-[14px] text-[#666666]  p-2'>
                     <CiBookmarkMinus className='' size={20} />
                    <li className=" pl-3 ">Bookmarks</li>
                    </div>
+                   </Link>
                    <div className='flex justify-between hover:bg-gray-200 p-1  hover:bg-gray-200 rounded-md font-normal text-[14px] text-[#666666]' >
                     <Link to='/proposal'>
                     <div className='flex content-center'> 
