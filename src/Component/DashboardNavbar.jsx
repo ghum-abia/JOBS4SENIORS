@@ -73,9 +73,11 @@ function DashboardSidebar() {
                     </div>
                     <div className="border-l-2 border-gray-300 pl-3">
 
-                        <div className="flex items-center border border-gray-300 h-10 rounded-2xl overflow-hidden">
-                            <input type="text" placeholder="Search for anything (Jobs)" className="border p-2 outline-none rounded-2xl bg-[#F6F6F6] border-0 w-70 px-6 py-4" />
-                            <button className="bg-[#15411FD9] text-white px-6 py-5 cursor-pointer">
+                        <div className="flex items-center h-10 rounded-2xl overflow-hidden border-gray-300 border-1">
+                            <div>
+                                <input type="text" placeholder="Search for anything (Jobs)" className="p-2 outline-none rounded-2xl bg-[#F6F6F6] w-70 px-6 py-4" />
+                            </div>
+                            <button className="bg-[#15411FD9] text-white px-6 h-full cursor-pointer ">
                                 <CiSearch />
                             </button>
                         </div>
