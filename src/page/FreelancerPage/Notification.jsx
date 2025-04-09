@@ -1,9 +1,9 @@
 import React from 'react'
-import Bookmarks from '../../Component/FreelancerComp/Bookmarks'
+import Notifications from '../../Component/FreelancerComp/Notifications'
 import DashboardNavbar from '../../Component/DashboardNavbar'
 import DashboardSidebar from '../../Component/DashboardSidebar'
 
- function Bookmark() {
+ function Notification() {
   return (
 
     <div>
@@ -20,7 +20,7 @@ import DashboardSidebar from '../../Component/DashboardSidebar'
     
             {/* Main Content */}
             <div className=" w-screen lg:w-4/5 px-6">
-            <Bookmarks />
+            <Notifications />
                  
             </div>
 
@@ -29,4 +29,4 @@ import DashboardSidebar from '../../Component/DashboardSidebar'
   </div>
   )
 }
-export default Bookmark
+export default Notification

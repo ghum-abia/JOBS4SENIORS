@@ -15,6 +15,9 @@ import Job from './page/FreelancerPage/Job.jsx';
 import JobDetail from './page/FreelancerPage/JobDetails.jsx';
 import Bookmark from './page/FreelancerPage/Bookmark.jsx';
 import SendProposals from './page/FreelancerPage/SendProposal.jsx';
+import Connect from './page/FreelancerPage/Connect.jsx';
+import NotificationPage from './page/FreelancerPage/Notification.jsx'
+import Chat from './page/FreelancerPage/Chatpage.jsx';
 
 
 
@@ -43,6 +46,10 @@ function App() {
               <Route path="/SendProposal/:id" element={<SendProposals />} />
               <Route path="/Job" element={<Job />} />
               <Route path="/Bookmark" element={<Bookmark   />} />
+              <Route path="/connect" element={<Connect />} />
+              <Route path="/notification" element={<NotificationPage />} />
+              <Route path="/messages" element={<Chat />} />
+              
 
             </Routes>
         </BrowserRouter>

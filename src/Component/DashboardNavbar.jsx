@@ -19,10 +19,10 @@ function DashboardSidebar() {
     const location = useLocation(); // Get current path
     const menuItems = [
         { name: "Home", path: "/Dashboard", icon: <RiHome5Fill size={20} />  },
-        { name: "About", path: "/Offerpage", icon: <HiMiniUserGroup size={20}  /> },
+        { name: "Connect", path: "/connect", icon: <HiMiniUserGroup size={20}  /> },
         { name: "Job", path: "/Job", icon: <FaToolbox size={20}  /> },
-        {name: "Notifications", id: "notifications", path: "/contact", icon: <RiNotification4Fill size={20}  /> },
-        { name: "messages", id: 'messages', path: "/contact", icon: <AiOutlineMessage size={20}  /> },
+        {name: "Notifications", id: "notifications", path: "/notification", icon: <RiNotification4Fill size={20}  /> },
+        { name: "messages", id: 'messages', path: "/messages", icon: <AiOutlineMessage size={20}  /> },
         { name: "Contact", path: "/contact", icon: <RiNotification4Fill size={20}  /> },
       ];
 
