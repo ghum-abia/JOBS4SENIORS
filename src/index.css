@@ -1,7 +1,13 @@
 @import "tailwindcss";
+@plugin "daisyui" {
+  themes: light;
+}
+@theme {
+  --color-flag-green: #15411f;
+}
 
 body {
-    font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 
 /* .bgimage4 {
@@ -10,8 +16,3 @@ body {
     background-position: center; 
     background-repeat: no-repeat;
   } */
-
-
-
-
- 

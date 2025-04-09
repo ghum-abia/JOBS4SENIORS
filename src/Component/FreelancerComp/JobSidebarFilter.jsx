@@ -4,66 +4,66 @@ import { jobListings } from "./JobListings";
 const experienceLevels = ["No-experience", "Fresher", "Intermediate", "Expert"];
 const datePostedOptions = ["All", "Last Hour", "Last 24 Hours", "Last 7 Days", "Last 30 Days"];
 
-export default function SidebarFilter ({ applyFilters }) {
-    const [tempFilters, setTempFilters] = useState({
-        experience: [],
-        datePosted: [],
-      });
-    
-      const [counts, setCounts] = useState({ experience: {}, datePosted: {} });
-    
-      // Calculate filter counts dynamically
-      useEffect(() => {
-        const experienceCounts = {};
-        experienceLevels.forEach((level) => {
-          experienceCounts[level] = jobListings.filter((job) => job.experience === level).length;
-        });
-    
-        const dateCounts = {};
-        datePostedOptions.forEach((date) => {
-          if (date === "All") {
-            dateCounts[date] = jobListings.length; // "All" should count all jobs
-          } else {
-            dateCounts[date] = jobListings.filter((job) => job.datePosted === date).length;
+export default function SidebarFilter({ applyFilters }) {
+  const [tempFilters, setTempFilters] = useState({
+    experience: [],
+    datePosted: [],
+  });
+
+  const [counts, setCounts] = useState({ experience: {}, datePosted: {} });
+
+  // Calculate filter counts dynamically
+  useEffect(() => {
+    const experienceCounts = {};
+    experienceLevels.forEach((level) => {
+      experienceCounts[level] = jobListings.filter((job) => job.experience === level).length;
+    });
+
+    const dateCounts = {};
+    datePostedOptions.forEach((date) => {
+      if (date === "All") {
+        dateCounts[date] = jobListings.length; // "All" should count all jobs
+      } else {
+        dateCounts[date] = jobListings.filter((job) => job.datePosted === date).length;
+      }
+    });
+
+    setCounts({ experience: experienceCounts, datePosted: dateCounts });
+  }, []);
+
+  // Handle checkbox selection
+  const handleCheckboxChange = (category, value) => {
+    setTempFilters((prev) => {
+      let updatedFilters = { ...prev };
+
+      if (category === "datePosted") {
+        if (value === "All") {
+          updatedFilters.datePosted = ["All"]; // Select only "All"
+        } else {
+          if (updatedFilters.datePosted.includes("All")) {
+            updatedFilters.datePosted = []; // Remove "All" if another option is clicked
           }
-        });
-    
-        setCounts({ experience: experienceCounts, datePosted: dateCounts });
-      }, []);
-    
-      // Handle checkbox selection
-      const handleCheckboxChange = (category, value) => {
-        setTempFilters((prev) => {
-          let updatedFilters = { ...prev };
-    
-          if (category === "datePosted") {
-            if (value === "All") {
-              updatedFilters.datePosted = ["All"]; // Select only "All"
-            } else {
-              if (updatedFilters.datePosted.includes("All")) {
-                updatedFilters.datePosted = []; // Remove "All" if another option is clicked
-              }
-    
-              if (updatedFilters.datePosted.includes(value)) {
-                updatedFilters.datePosted = updatedFilters.datePosted.filter((item) => item !== value);
-              } else {
-                updatedFilters.datePosted = [...updatedFilters.datePosted, value];
-              }
-            }
+
+          if (updatedFilters.datePosted.includes(value)) {
+            updatedFilters.datePosted = updatedFilters.datePosted.filter((item) => item !== value);
           } else {
-            if (updatedFilters[category].includes(value)) {
-              updatedFilters[category] = updatedFilters[category].filter((item) => item !== value);
-            } else {
-              updatedFilters[category] = [...updatedFilters[category], value];
-            }
+            updatedFilters.datePosted = [...updatedFilters.datePosted, value];
           }
-    
-          return updatedFilters;
-        });
-      };
+        }
+      } else {
+        if (updatedFilters[category].includes(value)) {
+          updatedFilters[category] = updatedFilters[category].filter((item) => item !== value);
+        } else {
+          updatedFilters[category] = [...updatedFilters[category], value];
+        }
+      }
+
+      return updatedFilters;
+    });
+  };
   return (
     <div className="w-75  p-4  rounded-2xl shadow-md bg-white ">
-    
+
 
       {/* Experience Level */}
       <div className="mb-4">
