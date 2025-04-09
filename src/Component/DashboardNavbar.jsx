@@ -18,23 +18,13 @@ function DashboardSidebar() {
 
     const location = useLocation(); // Get current path
     const menuItems = [
-<<<<<<< HEAD
-        { name: "Home", path: "/Dashboard", icon: <RiHome5Fill size={20} />  },
-        { name: "Connect", path: "/connect", icon: <HiMiniUserGroup size={20}  /> },
-        { name: "Job", path: "/Job", icon: <FaToolbox size={20}  /> },
-        {name: "Notifications", id: "notifications", path: "/notification", icon: <RiNotification4Fill size={20}  /> },
-        { name: "messages", id: 'messages', path: "/messages", icon: <AiOutlineMessage size={20}  /> },
-        { name: "Contact", path: "/contact", icon: <RiNotification4Fill size={20}  /> },
-      ];
-=======
         { name: "Home", path: "/dashboard", icon: <RiHome5Fill size={20} /> },
-        { name: "About", path: "/offerpage", icon: <HiMiniUserGroup size={20} /> },
+        { name: "connect", path: "/connect", icon: <HiMiniUserGroup size={20} /> },
         { name: "Job", path: "/job", icon: <FaToolbox size={20} /> },
         { name: "Notifications", id: "notifications", path: "/notifications", icon: <RiNotification4Fill size={20} /> },
         { name: "messages", id: 'messages', path: "/messages", icon: <AiOutlineMessage size={20} /> },
         { name: "Contact", path: "/contact", icon: <RiNotification4Fill size={20} /> },
     ];
->>>>>>> 3e8002c2eec268cefaa032f75724ca50b8b235db
 
     return (
         <div >
