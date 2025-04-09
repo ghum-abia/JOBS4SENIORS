@@ -1,22 +1,15 @@
 import { GoldStar } from "../../Component/learning/GoldStar.jsx"
 import Progress from '../progressbar.jsx';
-import { FaPlay } from 'react-icons/fa';
 import { LuClock12 } from "react-icons/lu";
 import { RiUserLine } from "react-icons/ri";
 import PropTypes from 'prop-types';
-import { Link } from "react-router";
 
-export const Card = ({ title, topic, lecturer, duration, rating, progress, imageurl }) => {
+export const VideoCard = ({ title, topic, lecturer, duration, rating, progress, imageurl }) => {
       return (
             <>
-                  <div className="max-w-sm bg-white rounded-lg shadow-sm ">
+                  <div className="bg-white rounded-lg shadow-sm w-[96%]">
                         <div className="relative grid items-center">
-                              <img className="rounded-t-lg " src={imageurl} alt="" />
-                              <div className="absolute justify-center flex w-full">
-                                    <Link to='/dashboard/learning/lecture' state={{ title: title, topic: topic, lecturer: lecturer, duration: duration, rating: rating, progress: progress, imageurl: imageurl }} >
-                                          <FaPlay className="text-[#ffffffdc] w-10 h-10" />
-                                    </Link>
-                              </div>
+                              <img className="rounded-t-lg  h-60 w-full object-fill" src={imageurl} alt="" />
                         </div>
                         <div className="px-4 py-4 grid gap-3">
                               <div className="text-black font-bold">{title} - {topic}</div>
@@ -38,7 +31,7 @@ export const Card = ({ title, topic, lecturer, duration, rating, progress, image
       )
 }
 
-Card.propTypes = {
+VideoCard.propTypes = {
       title: PropTypes.string.isRequired,
       topic: PropTypes.string.isRequired,
       lecturer: PropTypes.string.isRequired,

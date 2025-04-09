@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from "react-router";
 
 import Landingpage from './homepage/landingpage';
@@ -16,6 +15,7 @@ import JobDetail from './page/FreelancerPage/JobDetails.jsx';
 import Bookmark from './page/FreelancerPage/Bookmark.jsx';
 import SendProposals from './page/FreelancerPage/SendProposal.jsx';
 import Learning from './page/learning/Learning.jsx';
+import Lecture from './page/learning/Lecture.jsx';
 
 
 
@@ -32,19 +32,20 @@ function App() {
         <Routes>
           <Route path="/" element={<Landingpage />} />
           <Route path="/registration" element={<Registration />} />
-          <Route path="/Login" element={<Login />} />
-          <Route path="/Dashboard" element={<Dashboard />} />
-          <Route path="/RecuiterDashoard" element={<RecuiterDashoard />} />
-          <Route path="/Offerpage" element={<Offerpage />} />
-          <Route path="/Faqs" element={<Faqs />} />
-          <Route path="/Forgetpassword" element={<Forgetpassword />} />
-          <Route path="/Proposal" element={<Proposal />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/recuiter/dashoard" element={<RecuiterDashoard />} />
+          <Route path="/offer/page" element={<Offerpage />} />
+          <Route path="/faqs" element={<Faqs />} />
+          <Route path="/forgetpassword" element={<Forgetpassword />} />
+          <Route path="/proposal" element={<Proposal />} />
           <Route path="/proposal/:slug" element={<ProposalDetail />} />
-          <Route path="/Job/:id" element={<JobDetail />} />
-          <Route path="/SendProposal/:id" element={<SendProposals />} />
-          <Route path="/Job" element={<Job />} />
-          <Route path="/Bookmark" element={<Bookmark />} />
-          <Route path="/Dashboard/Learning" element={<Learning />} />
+          <Route path="/job/:id" element={<JobDetail />} />
+          <Route path="/send/proposal/:id" element={<SendProposals />} />
+          <Route path="/job" element={<Job />} />
+          <Route path="/bookmark" element={<Bookmark />} />
+          <Route path="/dashboard/learning" element={<Learning />} />
+          <Route path="/dashboard/learning/lecture" element={<Lecture />} />
 
 
         </Routes>
