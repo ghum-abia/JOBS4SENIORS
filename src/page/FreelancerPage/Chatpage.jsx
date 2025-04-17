@@ -1,7 +1,6 @@
-import React from 'react'
 import DashboardNavbar from '../../Component/DashboardNavbar'
 
-import ChatPage from '../../Component/FreelancerComp/chatPage'
+import ChatPage from '../../Component/FreelancerComp/ChatPage'
 
 function Chatpage() {
   return (
