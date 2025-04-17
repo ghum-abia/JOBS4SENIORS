@@ -62,7 +62,7 @@ export default function SidebarFilter({ applyFilters }) {
     });
   };
   return (
-    <div className="w-75  p-4  rounded-2xl shadow-md bg-white ">
+    <div className="  p-4  rounded-2xl shadow-md bg-white ">
 
 
       {/* Experience Level */}

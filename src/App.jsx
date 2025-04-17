@@ -14,8 +14,15 @@ import Job from './page/FreelancerPage/Job.jsx';
 import JobDetail from './page/FreelancerPage/JobDetails.jsx';
 import Bookmark from './page/FreelancerPage/Bookmark.jsx';
 import SendProposals from './page/FreelancerPage/SendProposal.jsx';
+import Connect from './page/FreelancerPage/Connect.jsx';
+import NotificationPage from './page/FreelancerPage/Notification.jsx'
+import Chat from './page/FreelancerPage/Chatpage.jsx';
 import Learning from './page/learning/Learning.jsx';
+<<<<<<< HEAD
 import Lecture from './page/learning/Lecture.jsx';
+=======
+import Profile from './page/FreelancerPage/Profile.jsx';
+>>>>>>> master
 
 
 
@@ -26,7 +33,11 @@ function App() {
 
 
   return (
-
+  
+   
+   
+    
+    
     <div >
       <BrowserRouter>
         <Routes>
@@ -40,12 +51,24 @@ function App() {
           <Route path="/forgetpassword" element={<Forgetpassword />} />
           <Route path="/proposal" element={<Proposal />} />
           <Route path="/proposal/:slug" element={<ProposalDetail />} />
+<<<<<<< HEAD
           <Route path="/job/:id" element={<JobDetail />} />
           <Route path="/send/proposal/:id" element={<SendProposals />} />
           <Route path="/job" element={<Job />} />
           <Route path="/bookmark" element={<Bookmark />} />
           <Route path="/dashboard/learning" element={<Learning />} />
           <Route path="/dashboard/learning/lecture" element={<Lecture />} />
+=======
+          <Route path="/Job/:id" element={<JobDetail />} />
+          <Route path="/SendProposal/:id" element={<SendProposals />} />
+          <Route path="/Job" element={<Job />} />
+          <Route path="/Bookmark" element={<Bookmark />} />
+          <Route path="/Dashboard/Learning" element={<Learning />} />
+          <Route path="/connect" element={<Connect />} />
+          <Route path="/notifications" element={<NotificationPage />} />
+          <Route path="/messages" element={<Chat />} />
+          <Route path="/profile" element={<Profile />} />
+>>>>>>> master
 
 
         </Routes>

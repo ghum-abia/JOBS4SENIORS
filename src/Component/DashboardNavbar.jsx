@@ -17,16 +17,17 @@ function DashboardSidebar() {
     const location = useLocation(); // Get current path
     const menuItems = [
         { name: "Home", path: "/dashboard", icon: <RiHome5Fill size={20} /> },
-        { name: "About", path: "/offerpage", icon: <HiMiniUserGroup size={20} /> },
+        { name: "connect", path: "/connect", icon: <HiMiniUserGroup size={20} /> },
         { name: "Job", path: "/job", icon: <FaToolbox size={20} /> },
         { name: "Notifications", id: "notifications", path: "/notifications", icon: <RiNotification4Fill size={20} /> },
         { name: "messages", id: 'messages', path: "/messages", icon: <AiOutlineMessage size={20} /> },
-        { name: "Contact", path: "/contact", icon: <RiNotification4Fill size={20} /> },
+        { name: "profile", path: "/profile", icon: <RiNotification4Fill size={20} /> },
     ];
 
     return (
         <div >
             <div className=''>
+                
                 <nav className="bg-white fixed top-0 left-0 w-full z-[1000] shadow-md flex justify-between items-center  px-6">
 
 

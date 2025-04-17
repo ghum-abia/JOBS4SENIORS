@@ -1,26 +1,28 @@
 import React from 'react'
-import Bookmarks from '../../Component/FreelancerComp/Bookmarks'
+import Notifications from '../../Component/FreelancerComp/Notifications'
 import DashboardNavbar from '../../Component/DashboardNavbar'
 import DashboardSidebar from '../../Component/DashboardSidebar'
 
- function Bookmark() {
+ function Notification() {
   return (
 
     <div>
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-gray-100 gap-4 pb-10 h-full pt-20">
+      <div>
         <DashboardNavbar />
+      </div>
 
-        <div className="flex  pt-25 px-6">
+        <div className="flex  lg:pl-30 lg:pr-20">
              {/* Left Sidebar */}
      
-        <aside className="w-1/5 hidden   lg:block">
+        <aside className="w-[25%] hidden   lg:block">
         <DashboardSidebar />
        
         </aside>
     
             {/* Main Content */}
-            <div className=" w-screen lg:w-4/5 px-6">
-            <Bookmarks />
+            <div className=" w-screen lg:w-[75%]">
+            <Notifications />
                  
             </div>
 
@@ -29,4 +31,4 @@ import DashboardSidebar from '../../Component/DashboardSidebar'
   </div>
   )
 }
-export default Bookmark
+export default Notification
