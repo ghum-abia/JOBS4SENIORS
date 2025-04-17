@@ -22,7 +22,7 @@ export default function Bookmarks() {
               <p className="bg-[#3096891A] text-[#309689] font-normal p-1 rounded ">{job.timePosted}<span> ago</span></p>
               <button
                   
-                    className=" text-[#15411F] "
+                    className=" text-flag-green "
                   >
                    <BsBookmarkPlus />
                   </button>
@@ -44,14 +44,14 @@ export default function Bookmarks() {
              <div className="flex pt-4">
                        <div className="flex mr-8">
                          <img src={proposalimage1} alt="" />
-                         <div className="text-[#15411F] font-semibold ml-2 md:text-[14px]">
+                         <div className="text-flag-green font-semibold ml-2 md:text-[14px]">
                            {job.category}
                          </div>
                        </div>
                        <div>
                          <div className="flex mr-8">
                            <img src={clock} alt="" />
-                           <div className="text-[#15411F] font-semibold ml-2 md:text-[14px]">
+                           <div className="text-flag-green font-semibold ml-2 md:text-[14px]">
                              {job.hoursPerWeek} <span>hrs/week</span>
                            </div>
                          </div>
@@ -59,20 +59,20 @@ export default function Bookmarks() {
                        <div>
                          <div className="flex mr-8">
                            <img src={wallet} alt="" />
-                           <div className="text-[#15411F] font-semibold ml-2 md:text-[14px]">
+                           <div className="text-flag-green font-semibold ml-2 md:text-[14px]">
                              {job.salary} <span>/hr</span>
                            </div>
                          </div>
                        </div>
                        <div className="flex mr-8">
                            <img src={mappin} alt="" />
-                           <div className="text-[#15411F] font-semibold ml-2 md:text-[14px]">
+                           <div className="text-flag-green font-semibold ml-2 md:text-[14px]">
                              {job.location}
                            </div>
                          </div>
                      </div>
                                         <Link to={`/job/${job.id}`}>
-                                              <button className="bg-[#15411F] text-white font-normal text-[14px] px-4 py-2 rounded-md ">
+                                              <button className="bg-flag-green text-white font-normal text-[14px] px-4 py-2 rounded-md ">
                                               Job Details
                                               </button>
                                         </Link>

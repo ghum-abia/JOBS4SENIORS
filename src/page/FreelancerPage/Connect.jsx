@@ -5,16 +5,17 @@ import DashboardSidebar from '../../Component/DashboardSidebar'
 
 function Connect() {
   return (
-    <div className="bg-gray-100 min-h-screen">
-      
+    <div className="bg-gray-100 gap-4 pb-10 h-screen pt-20 ">
+        <div>
         <DashboardNavbar />
-        <div  className='flex pt-25 px-6'>
-        <aside className="w-1/5 hidden   lg:block">
-        <DashboardSidebar />
-       
-        </aside>
+        </div>
+        <div  className='flex  lg:pl-30 lg:pr-20'>
+            <aside className="hidden w-[25%]   lg:block">
+            <DashboardSidebar />
+          
+            </aside>
          {/* Main Content */}
-                   <div className=" w-screen lg:w-4/5 px-6">
+                   <div className=" w-full lg:w-[78%] space-y-2">
                    <Connects />
                         
                    </div>

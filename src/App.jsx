@@ -19,6 +19,7 @@ import Connect from './page/FreelancerPage/Connect.jsx';
 import NotificationPage from './page/FreelancerPage/Notification.jsx'
 import Chat from './page/FreelancerPage/Chatpage.jsx';
 import Learning from './page/learning/Learning.jsx';
+import Profile from './page/FreelancerPage/Profile.jsx';
 
 
 
@@ -55,6 +56,7 @@ function App() {
           <Route path="/connect" element={<Connect />} />
           <Route path="/notifications" element={<NotificationPage />} />
           <Route path="/messages" element={<Chat />} />
+          <Route path="/profile" element={<Profile />} />
 
 
         </Routes>

@@ -5,11 +5,15 @@ import ChatPage from '../../Component/FreelancerComp/chatPage'
 
 function Chatpage() {
   return (
-    <div>
-         <div className="bg-gray-100 min-h-screen">
+    <div className="bg-gray-100 gap-4 pb-10 pt-20 h-full ">
+         <div>
          <DashboardNavbar />
-         <ChatPage />
-         </div>
+          </div>
+          <div>
+          <ChatPage />
+          </div>
+        
+         
     </div>
   )
 }

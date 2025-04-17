@@ -184,9 +184,9 @@ const ChatPage = () => {
   };
 
   return (
-    <div className="flex flex-1 h-[calc(100vh-5px)] pt-25 mx-20">  
+    <div className="flex  h-[calc(100vh-5px)] lg:pl-30 lg:pr-20 ">  
       {/* Left sidebar with chat list */}
-      <div className="w-[350px] mr-2 bg-white  rounded-2xl ">
+      <div className=" hidden lg:block mr-2 bg-white  rounded-2xl ">
         <div className="p-4">
           <h2 className="font- text-normal  uppercase text-[12px] text-[#181818]">CHATS</h2>
          
@@ -204,14 +204,14 @@ const ChatPage = () => {
                 <img 
                   src={chat.avatar} 
                   alt={chat.name} 
-                  className="w-12 h-12 rounded-full object-cover"
+                  className="w-10 h-10 rounded-full object-cover"
                 />
                 {chat.online && (
                   <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-white"></div>
                 )}
               </div>
               <div className="ml-3 flex-1">
-                <h3 className="font-medium text-gray-800">{chat.name}</h3>
+                <h3 className="font-normal text-gray-800">{chat.name}</h3>
                 <p className="text-gray-500 text-sm truncate">{chat.lastMessage}</p>
               </div>
             </div>
@@ -228,7 +228,7 @@ const ChatPage = () => {
      
 
       {/* Main chat area */}
-      <div className="flex-1 flex flex-col bg-gray-50  rounded-2xl">
+      <div className="  flex-1 flex flex-col bg-gray-50  rounded-2xl">
       <h2 className="text-[21px] text-[#3A3A3A] p-4 font-semibold">Chats</h2>
         {/* Chat header */}
         <div className="bg-white px-4">
@@ -236,7 +236,7 @@ const ChatPage = () => {
           <div className="flex justify-between items-center">
             
               <button className=" hover:bg-gray-200  px-3 py-1 rounded-l-md">
-              CHAT WITH <span className="text-[#15411F]"> {activeChat.name.toUpperCase()} </span>
+              CHAT WITH <span className="text-flag-green"> {activeChat.name.toUpperCase()} </span>
               </button>
               <button className=" hover:bg-gray-200 text-gray-500 px-3 py-1 rounded-r-md">
                 LAST ONLINE: 4 HOURS AGO
@@ -244,7 +244,7 @@ const ChatPage = () => {
            
             <div className="ml-4">
               <button className="flex items-center text-gray-600 hover:text-gray-800">
-                <FiPaperclip  size={18} className="mr-1 text-[#15411F]" />
+                <FiPaperclip  size={18} className="mr-1 text-flag-green" />
                 <span className="text-sm font-medium">SHARED MEDIA (12)</span>
               </button>
             </div>
@@ -265,7 +265,7 @@ const ChatPage = () => {
               {convo.sender === 'me' && (
                 <>
                   <div className="mr-2">
-                    <div className="bg-[#15411F] text-white p-3 rounded-lg max-w-md">
+                    <div className="bg-flag-green text-white p-3 rounded-lg max-w-md">
                     {convo.file ? (
                       convo.file.isImage ? (
                         <img src={convo.message} alt={convo.file.name} className="rounded-md max-w-xs" />
@@ -346,7 +346,7 @@ const ChatPage = () => {
 
             <button 
               type="submit" 
-              className="bg-[#15411F] text-white p-3 rounded-r-md hover:bg-green-900"
+              className="bg-flag-green text-white p-3 rounded-r-md hover:bg-green-900"
             >
               <BsSend size={20} />
             </button>

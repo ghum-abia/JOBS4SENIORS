@@ -69,7 +69,7 @@ export default function Connects() {
             <button
               className={`flex-1 py-4 font-medium text-center ${
                 activeTab === "received" 
-                  ? "bg-[#15411F] text-white" 
+                  ? "bg-flag-green text-white" 
                   : "bg-white text-gray-600 hover:bg-gray-50"
               }`}
               onClick={() => setActiveTab("received")}
@@ -79,7 +79,7 @@ export default function Connects() {
             <button
               className={`flex-1 py-4 font-medium text-center ${
                 activeTab === "sent" 
-                  ? "bg-[#15411F] text-white" 
+                  ? "bg-flag-green text-white" 
                   : "bg-white text-gray-600 hover:bg-gray-50"
               }`}
               onClick={() => setActiveTab("sent")}

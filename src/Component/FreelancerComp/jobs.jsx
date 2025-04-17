@@ -59,12 +59,12 @@ function jobs() {
   return (
     <div>
       <div className='flex space-x-4'>
-          <aside className="w-1/5 hidden  lg:block">
+          <aside className="w-[25%] hidden  lg:block">
           <JobSidebar />
        
         </aside>
-            
-              <div className=' w-3/5 '>
+            <div className="w-full flex lg:w-[78%] space-x-2">
+              <div className='w-1/2 lg:w-4/5'>
                 
                 <div className='flex items-center p-2 pl-4 '>
                 <CiSearch />
@@ -95,24 +95,29 @@ function jobs() {
 
               </div>
               </div>
-              <div className="w-1/5 hidden   lg:block">
+              <div className=" hidden w-1/5  lg:block">
                 <aside className=' bg-white  shadow-md rounded-2xl'> 
                                     <div className='bg-white  shadow-md rounded-2xl'>
-                                    <img src={premuimimg}  alt="" />
+                                    <img src={premuimimg} className='h-[145px]'  alt="" />
                                     </div>
                                 </aside>
               </div>
+            </div>
       </div>
       <div>
         {/* <Button className='{text-red-500 bg-red-500}' variant="contained" >click me</Button> */}
 
-        <div className="flex w-full">
+        <div className="flex">
+        <div  className='w-[25%] hidden lg:block'>
       <SidebarFilter applyFilters={applyFilters} />
+       </div>
+       <div className='w-full lg:w-[78%]'>  
       {searchTerm ? (
           <JobList  filteredJobs={searchResults}  bookmarkJob={bookmarkJob} />
         ) : (
           <JobList filteredJobs={filteredJobs} bookmarkJob={bookmarkJob} />
         )}
+        </div>
     </div>
       </div>
     </div>
