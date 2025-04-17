@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 const Progress = ({ value, color }) => {
       color ? color : color = "#15411F";
       return (
@@ -11,6 +12,11 @@ const Progress = ({ value, color }) => {
                   ></div>
             </div>
       );
+};
+
+Progress.propTypes = {
+      value: PropTypes.any,
+      color: PropTypes.any,
 };
 
 export default Progress;

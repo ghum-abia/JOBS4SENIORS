@@ -1,19 +1,20 @@
-import { GoldStar } from "../../Component/learning/GoldStar.jsx"
 import Progress from '../progressbar.jsx';
 import { FaPlay } from 'react-icons/fa';
 import { LuClock12 } from "react-icons/lu";
 import { RiUserLine } from "react-icons/ri";
 import PropTypes from 'prop-types';
 import { Link } from "react-router";
+import { MdStarRate as StarRating } from "react-icons/md";
 
-export const Card = ({ title, topic, lecturer, duration, rating, progress, imageurl }) => {
+
+export const Card = ({ title, topic, lecturer, duration, rating, category, progress, imageurl }) => {
       return (
             <>
-                  <div className="max-w-sm bg-white rounded-lg shadow-sm ">
+                  <div className="max-w-sm rounded-t-2xl shadow-sm ">
                         <div className="relative grid items-center">
-                              <img className="rounded-t-lg " src={imageurl} alt="" />
+                              <img className="rounded-t-2xl " src={imageurl} alt="" />
                               <div className="absolute justify-center flex w-full">
-                                    <Link to='/dashboard/learning/lecture' state={{ title: title, topic: topic, lecturer: lecturer, duration: duration, rating: rating, progress: progress, imageurl: imageurl }} >
+                                    <Link to='/dashboard/learning/lecture' state={{ title: title, topic: topic, lecturer: lecturer, duration: duration, rating: rating, progress: progress, imageurl: imageurl, category: category }} >
                                           <FaPlay className="text-[#ffffffdc] w-10 h-10" />
                                     </Link>
                               </div>
@@ -23,7 +24,7 @@ export const Card = ({ title, topic, lecturer, duration, rating, progress, image
                               <div className="flex justify-between text-sm text-[#00000075] font-bold">
                                     <span className="flex gap-1"><RiUserLine className="mt-1 " />{lecturer}</span>
                                     <span className="flex gap-1" ><LuClock12 className="mt-1" />{duration}</span>
-                                    <span className="flex"><GoldStar className="w-4 h-5react " />{rating}</span>
+                                    <span className="flex">  <StarRating className="text-yellow-500" size={19} />{rating}</span>
                               </div>
                               <div className="flex w-full justify-between">
                                     <span className="text-black text-sm">{progress}% Complete</span>
@@ -45,5 +46,6 @@ Card.propTypes = {
       duration: PropTypes.string.isRequired,
       rating: PropTypes.number.isRequired,
       progress: PropTypes.number.isRequired,
-      imageurl: PropTypes.string.isRequired
+      imageurl: PropTypes.isRequired,
+      category: PropTypes.isRequired
 }

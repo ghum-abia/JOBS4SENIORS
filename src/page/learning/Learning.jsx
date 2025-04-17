@@ -1,12 +1,14 @@
 import Navbar from "../../Component/DashboardNavbar.jsx";
 import LeftSidebar from "../../Component/DashboardSidebar.jsx";
 import { Card } from "../../Component/learning/CourseCard.jsx";
+import image from "../../assets/learning/lecture.jpg"
 
 const Learning = () => {
       let videos = [
             {
                   id: 1,
-                  imageurl: 'https://media.istockphoto.com/id/1320658267/photo/asian-college-student-is-making-a-presentation-in-front-of-projector-screen.jpg?s=1024x1024&w=is&k=20&c=9nTStY-6pBwo5zpBAQhbngYbNhccYYOSG_nNbcVQOFQ=',
+                  imageurl: { image },
+                  category: 'law',
                   title: 'Audit Law Forensics',
                   topic: 'A Standard Operating Procedure',
                   name: 'Roy Davis',
@@ -16,8 +18,9 @@ const Learning = () => {
             },
             {
                   id: 2,
-                  imageurl: 'https://media.istockphoto.com/id/1320658267/photo/asian-college-student-is-making-a-presentation-in-front-of-projector-screen.jpg?s=1024x1024&w=is&k=20&c=9nTStY-6pBwo5zpBAQhbngYbNhccYYOSG_nNbcVQOFQ=',
+                  imageurl: { image },
                   title: 'Audit Law Forensics',
+                  category: 'law',
                   topic: 'A Standard Operating Procedure',
                   name: 'Roy Davis',
                   duration: '5 hrs',
@@ -26,8 +29,9 @@ const Learning = () => {
             },
             {
                   id: 3,
-                  imageurl: 'https://media.istockphoto.com/id/1320658267/photo/asian-college-student-is-making-a-presentation-in-front-of-projector-screen.jpg?s=1024x1024&w=is&k=20&c=9nTStY-6pBwo5zpBAQhbngYbNhccYYOSG_nNbcVQOFQ=',
+                  imageurl: { image },
                   title: 'Audit Law Forensics',
+                  category: 'law',
                   topic: 'A Standard Operating Procedure',
                   name: 'Roy Davis',
                   duration: '5 hrs',
@@ -36,8 +40,9 @@ const Learning = () => {
             },
             {
                   id: 4,
-                  imageurl: 'https://media.istockphoto.com/id/1320658267/photo/asian-college-student-is-making-a-presentation-in-front-of-projector-screen.jpg?s=1024x1024&w=is&k=20&c=9nTStY-6pBwo5zpBAQhbngYbNhccYYOSG_nNbcVQOFQ=',
+                  imageurl: { image },
                   title: 'Audit Law Forensics',
+                  category: 'law',
                   topic: 'A Standard Operating Procedure',
                   name: 'Roy Davis',
                   duration: '5 hrs',
@@ -46,8 +51,9 @@ const Learning = () => {
             },
             {
                   id: 5,
-                  imageurl: 'https://media.istockphoto.com/id/1320658267/photo/asian-college-student-is-making-a-presentation-in-front-of-projector-screen.jpg?s=1024x1024&w=is&k=20&c=9nTStY-6pBwo5zpBAQhbngYbNhccYYOSG_nNbcVQOFQ=',
+                  imageurl: { image },
                   title: 'Audit Law Forensics',
+                  category: 'law',
                   topic: 'A Standard Operating Procedure',
                   name: 'Roy Davis',
                   duration: '5 hrs',
@@ -56,8 +62,9 @@ const Learning = () => {
             },
             {
                   id: 6,
-                  imageurl: 'https://media.istockphoto.com/id/1320658267/photo/asian-college-student-is-making-a-presentation-in-front-of-projector-screen.jpg?s=1024x1024&w=is&k=20&c=9nTStY-6pBwo5zpBAQhbngYbNhccYYOSG_nNbcVQOFQ=',
+                  imageurl: { image },
                   title: 'Audit Law Forensics',
+                  category: 'law',
                   topic: 'A Standard Operating Procedure',
                   name: 'Roy Davis',
                   duration: '5 hrs',
@@ -66,8 +73,9 @@ const Learning = () => {
             },
             {
                   id: 7,
-                  imageurl: 'https://media.istockphoto.com/id/1320658267/photo/asian-college-student-is-making-a-presentation-in-front-of-projector-screen.jpg?s=1024x1024&w=is&k=20&c=9nTStY-6pBwo5zpBAQhbngYbNhccYYOSG_nNbcVQOFQ=',
+                  imageurl: { image },
                   title: 'Audit Law Forensics',
+                  category: 'law',
                   topic: 'A Standard Operating Procedure',
                   name: 'Roy Davis',
                   duration: '5 hrs',
@@ -76,8 +84,9 @@ const Learning = () => {
             },
             {
                   id: 8,
-                  imageurl: 'https://media.istockphoto.com/id/1320658267/photo/asian-college-student-is-making-a-presentation-in-front-of-projector-screen.jpg?s=1024x1024&w=is&k=20&c=9nTStY-6pBwo5zpBAQhbngYbNhccYYOSG_nNbcVQOFQ=',
+                  imageurl: { image },
                   title: 'Audit Law Forensics',
+                  category: 'law',
                   topic: 'A Standard Operating Procedure',
                   name: 'Roy Davis',
                   duration: '5 hrs',
@@ -86,8 +95,9 @@ const Learning = () => {
             },
             {
                   id: 9,
-                  imageurl: 'https://media.istockphoto.com/id/1320658267/photo/asian-college-student-is-making-a-presentation-in-front-of-projector-screen.jpg?s=1024x1024&w=is&k=20&c=9nTStY-6pBwo5zpBAQhbngYbNhccYYOSG_nNbcVQOFQ=',
+                  imageurl: { image },
                   title: 'Audit Law Forensics',
+                  category: 'law',
                   topic: 'A Standard Operating Procedure',
                   name: 'Roy Davis',
                   duration: '5 hrs',
@@ -96,8 +106,9 @@ const Learning = () => {
             },
             {
                   id: 10,
-                  imageurl: 'https://media.istockphoto.com/id/1320658267/photo/asian-college-student-is-making-a-presentation-in-front-of-projector-screen.jpg?s=1024x1024&w=is&k=20&c=9nTStY-6pBwo5zpBAQhbngYbNhccYYOSG_nNbcVQOFQ=',
+                  imageurl: { image },
                   title: 'Audit Law Forensics',
+                  category: 'law',
                   topic: 'A Standard Operating Procedure',
                   name: 'Roy Davis',
                   duration: '5 hrs',
@@ -106,8 +117,9 @@ const Learning = () => {
             },
             {
                   id: 11,
-                  imageurl: 'https://media.istockphoto.com/id/1320658267/photo/asian-college-student-is-making-a-presentation-in-front-of-projector-screen.jpg?s=1024x1024&w=is&k=20&c=9nTStY-6pBwo5zpBAQhbngYbNhccYYOSG_nNbcVQOFQ=',
+                  imageurl: { image },
                   title: 'Audit Law Forensics',
+                  category: 'law',
                   topic: 'A Standard Operating Procedure',
                   name: 'Roy Davis',
                   duration: '5 hrs',
@@ -116,8 +128,9 @@ const Learning = () => {
             },
             {
                   id: 12,
-                  imageurl: 'https://media.istockphoto.com/id/1320658267/photo/asian-college-student-is-making-a-presentation-in-front-of-projector-screen.jpg?s=1024x1024&w=is&k=20&c=9nTStY-6pBwo5zpBAQhbngYbNhccYYOSG_nNbcVQOFQ=',
+                  imageurl: { image },
                   title: 'Audit Law Forensics',
+                  category: 'law',
                   topic: 'A Standard Operating Procedure',
                   name: 'Roy Davis',
                   duration: '5 hrs',
@@ -131,23 +144,21 @@ const Learning = () => {
                         <div className='hidden lg:block '>
                               < Navbar />
                         </div>
-
-                        <div className='flex flex-col lg:flex-row  justify-between   pl-30 pr-20'>
+                        <div className='flex flex-col lg:flex-row justify-between px-20 mt-5'>
                               {/* Left Sidebar */}
-                              <aside className="w-[25%] hidden lg:block relative" >
+                              <aside className="w-[25%] hidden lg:block relative " >
                                     <LeftSidebar />
                               </aside>
-                              <div className='w-[78%] space-y-2'>
-
-                                    <ul className="flex justify-evenly bg-white rounded-lg p-1 w-1/2">
-                                          <li className="text-[#00000075] text-[14px] font-normal px-2 py-2 text-center bg-white hover:bg-flag-green hover:text-white rounded-md w-30">All Courses</li>
-                                          <li className="text-[#00000075] text-[14px] font-normal bg-white px-2 py-2 text-center text  hover:bg-flag-green hover:text-white w-40 rounded-md">Enrolled Courses</li>
-                                          <li className="text-[#00000075] text-[14px] font-normal bg-white px-2 py-2 text-center text bg-white rounded-md hover:bg-flag-green hover:text-white w-50">Completed Courses</li>
+                              <div className='w-[75%] space-y-5'>
+                                    <ul className="flex justify-evenly bg-white rounded-lg w-[45%]">
+                                          <li className="text-[#00000075] text-[14px] font-normal px-2 py-3 text-center bg-white hover:bg-flag-green hover:text-white rounded-md w-30">All Courses</li>
+                                          <li className="text-[#00000075] text-[14px] font-normal bg-white px-2 py-3 text-center text  hover:bg-flag-green hover:text-white w-40 rounded-md">Enrolled Courses</li>
+                                          <li className="text-[#00000075] text-[14px] font-normal bg-white px-2 py-3 text-center text bg-white rounded-md hover:bg-flag-green hover:text-white w-50">Completed Courses</li>
                                     </ul>
 
-                                    <div className="rounded-lg grid grid-cols-3  gap-y-3 gap-x-3 " >
+                                    <div className=" grid grid-cols-3  gap-y-3 gap-x-3 " >
                                           {videos.map((video) => (
-                                                <Card key={video.id} imageurl={video.imageurl} title={video.title} topic={video.topic} lecturer={video.name} duration={video.duration} rating={video.rating} progress={video.progress} />
+                                                <Card key={video.id} imageurl={video.imageurl.image} title={video.title} topic={video.topic} lecturer={video.name} duration={video.duration} rating={video.rating} category={video.category} progress={video.progress} />
                                           ))}
                                     </div>
 

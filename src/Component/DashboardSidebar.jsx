@@ -12,12 +12,14 @@ import { MdInsertChartOutlined } from "react-icons/md";
 import { Link } from 'react-router'
 import { LuSettings } from "react-icons/lu";
 import Progress from './progressbar';
+import { useLocation } from 'react-router';
 
 
 //helloworld  
 function DashboardSidebar() {
   const progress = 90;
   const proposal = 10;
+  const location = useLocation()
   return (
     <div>
       <div className='grid px-4 gap-2'>
@@ -42,7 +44,7 @@ function DashboardSidebar() {
             </div>
           </div>
           <div className='flex items-center p-2 cursor-pointer pb-3'>
-            <div className='pl-2 text-[#00000075]'><BsFilePlus /></div>
+            <div className='pl-2 text-grayish'><BsFilePlus fontSize={19} className='font-extrabold text-lg' /></div>
             <div className=' font-normal text-[10px] text-[#00000075] pl-4'>Add another account</div>
           </div>
 
@@ -52,7 +54,7 @@ function DashboardSidebar() {
         <div >
           <ul className=" bg-white px-3 py-5 rounded-2xl grid gap-2 shadow-md">
             <Link to="/dashboard/learning">
-              <div className='flex  hover:bg-gray-200 rounded-md font-normal text-[14px] text-[#666666]  p-2'>
+              <div className={location.pathname === "/dashboard/learning" || location.pathname == "/dashboard/learning/lecture" || location.pathname.startsWith("/dashboard/learning") ? "flex hover:bg-gray-200 rounded-md font-normal text-[14px] text-flag-green  p-2" : "flex hover:bg-gray-200 rounded-md font-normal text-[14px] text-[#666666]  p-2"}>
                 <LuCirclePlay className='' size={20} />
                 <li className=" pl-3 ">Learning</li>
               </div>
@@ -90,12 +92,11 @@ function DashboardSidebar() {
           </ul>
         </div>
 
-        <div className='bg-white mt-2  shadow-md rounded-2xl pl-2 p-1'>
+        <div className='bg-white mt-2  shadow-md rounded-2xl p-1'>
 
           <HashTag />
 
-          <hr className='text-[#F4F4F4]' />
-        </div>
+          </div>
       </div>
     </div>
   )

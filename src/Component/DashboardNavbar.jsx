@@ -41,16 +41,15 @@ function DashboardSidebar() {
 
                     </div>
 
+
                     <div>
                         <ul className="flex space-x-4 justify-center ">
                             {menuItems.map((item) => (
                                 <li key={item.path} className="relative">
                                     <Link
                                         to={item.path}
-                                        className={`flex flex-col items-center px-4 py-6 transition-colors text-lg ${location.pathname === item.path || location.pathname === location.pathname + '/'
-                                            ? "border-b-2 text-[#15411F]"
-                                            : "text-gray-300 border-[#15411F] hover:text-[#15411F] hover:border-[#15411F]"
-                                            }`}
+                                      
+                                        className={location.pathname === item.path || location.pathname === `${item.path}/` || (item.path !== '/' && location.pathname.startsWith(item.path)) ? "border-b-2 text-[#15411F] flex flex-col items-center px-4 py-6 transition-colors text-lg"  : "text-gray-300 border-[#15411F] hover:text-[#15411F] hover:border-[#15411F] flex flex-col items-center px-4 py-6 transition-colors text-lg" }
                                     >
                                         {item.icon}
                                         {item.id === "notifications" && notifications > 0 && (
