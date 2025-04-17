@@ -18,14 +18,8 @@ import Connect from './page/FreelancerPage/Connect.jsx';
 import NotificationPage from './page/FreelancerPage/Notification.jsx'
 import Chat from './page/FreelancerPage/Chatpage.jsx';
 import Learning from './page/learning/Learning.jsx';
-<<<<<<< HEAD
 import Lecture from './page/learning/Lecture.jsx';
-=======
 import Profile from './page/FreelancerPage/Profile.jsx';
->>>>>>> master
-
-
-
 import './App.css'
 
 
@@ -51,14 +45,12 @@ function App() {
           <Route path="/forgetpassword" element={<Forgetpassword />} />
           <Route path="/proposal" element={<Proposal />} />
           <Route path="/proposal/:slug" element={<ProposalDetail />} />
-<<<<<<< HEAD
           <Route path="/job/:id" element={<JobDetail />} />
           <Route path="/send/proposal/:id" element={<SendProposals />} />
           <Route path="/job" element={<Job />} />
           <Route path="/bookmark" element={<Bookmark />} />
           <Route path="/dashboard/learning" element={<Learning />} />
           <Route path="/dashboard/learning/lecture" element={<Lecture />} />
-=======
           <Route path="/Job/:id" element={<JobDetail />} />
           <Route path="/SendProposal/:id" element={<SendProposals />} />
           <Route path="/Job" element={<Job />} />
@@ -68,7 +60,6 @@ function App() {
           <Route path="/notifications" element={<NotificationPage />} />
           <Route path="/messages" element={<Chat />} />
           <Route path="/profile" element={<Profile />} />
->>>>>>> master
 
 
         </Routes>
