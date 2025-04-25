@@ -18,8 +18,9 @@ export const VideoCard = ({ title, topic, lecturer, category, /*duration,*/  rat
       return (
             <>
                   <div className="bg-transparent rounded-t-4xl  w-[100%] h-full">
-                        <div className="relative rounded-t-4xl group grid items-center">
-                              <img className="rounded-t-2xl  h-60 w-full object-fill" src={imageurl} alt="" />
+                        <div className=" rounded-t-4xl bg-black">
+                              { }
+                              <video src="/tst.mp4" className="rounded-t-2xl  h-70 w-full object-contain" controls/>
                         </div>
                         <div className=" py-2 grid gap-3">
                               <div className="text-black font-bold">{title} - {topic}</div>
