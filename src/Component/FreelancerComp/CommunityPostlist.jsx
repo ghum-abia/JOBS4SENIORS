@@ -18,8 +18,9 @@ import { BsSend, BsCameraVideo } from "react-icons/bs";
 import { SlCalender } from "react-icons/sl";
 import { TbNotes } from "react-icons/tb";
 import Feed from './Feed'
+import CommunityPost from './CommunityPost'
 
-function dashboard() {
+function CommnunityPostlist() {
   const [text, setText] = useState("");
   return (
     <div>
@@ -45,7 +46,7 @@ function dashboard() {
               {/* Post Input */}
 
               <div className="  mb-4 mr-4">
-                <Feed />
+                <CommunityPost />
                 </div>
 
 
@@ -131,4 +132,4 @@ function dashboard() {
   )
 }
 
-export default dashboard
+export default  CommnunityPostlist
