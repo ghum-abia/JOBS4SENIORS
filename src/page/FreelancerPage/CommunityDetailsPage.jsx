@@ -1,10 +1,9 @@
-import React from 'react'
 import DashboardNavbar from '../../Component/DashboardNavbar'
 import DashboardSidebar from '../../Component/DashboardSidebar'
-import CommunityDetails from '../../Component/FreelancerComp/communityDetails'
+import CommunityDetails from '../../Component/FreelancerComp/CommunityDetails'
 
 
-function communityDetails() {
+function CommunityDetailsPage() {
   return (
     <div>
         <div className="bg-gray-100 gap-4 pb-10 h-full pt-20">
@@ -33,4 +32,4 @@ function communityDetails() {
   )
 }
 
-export default communityDetails
+export default CommunityDetailsPage

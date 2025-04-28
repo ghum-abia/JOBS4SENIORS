@@ -5,7 +5,7 @@ import { VideoCard } from "../../Component/learning/VideoCard.jsx";
 import { Module } from "../../Component/learning/Module.jsx";
 import { MdArrowForward } from "react-icons/md";
 
-const Learning = () => {
+const Lecture = () => {
       let location = useLocation();
       let data = location.state;
       let moduleComplete = false
@@ -81,4 +81,4 @@ const Learning = () => {
       )
 }
 
-export default Learning;
+export default Lecture;
