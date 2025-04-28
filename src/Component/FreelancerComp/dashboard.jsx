@@ -41,11 +41,7 @@ function dashboard() {
 
         
        
-<<<<<<< HEAD
-            <main className=" w-screen lg:w-3/5 ">
-=======
             <main className=" w-screen lg:w-[55%] ">
->>>>>>> 79473909e3ee2fa0cbe5ba0d8e3364a6a10c9818
               {/* Post Input */}
 
               <div className="  mb-4 mr-4">
