@@ -12,7 +12,7 @@ const JobList = ({ filteredJobs, bookmarkJob }) => {
   
 
   return (
-    <div className=" p-6 ml-4 mt-1 bg-white rounded-lg shadow-md w-full"> 
+    <div className=" p-6 mt-1 bg-white rounded-lg shadow-md w-full"> 
       <h4 className="text-xl font-semibold mb-4">Filtered Jobs</h4>
       {filteredJobs.length > 0 ? (
         filteredJobs.map((job) => (

@@ -29,7 +29,7 @@ function dashboard() {
       <DashboardNavbar />
      
       
-      <div className="flex lg:pl-30 lg:pr-20">
+      <div className="flex lg:px-20">
         {/* Left Sidebar */}
      
         <aside className="w-[25%] hidden   lg:block">
@@ -41,7 +41,11 @@ function dashboard() {
 
         
        
+<<<<<<< HEAD
             <main className=" w-screen lg:w-3/5 ">
+=======
+            <main className=" w-screen lg:w-[55%] ">
+>>>>>>> 79473909e3ee2fa0cbe5ba0d8e3364a6a10c9818
               {/* Post Input */}
 
               <div className="  mb-4 mr-4">
@@ -119,7 +123,7 @@ function dashboard() {
             </main>
 
             {/* Right Sidebar */}
-            <aside className=" w-1/5 hidden lg:block  ">
+            <aside className=" w-[20%] hidden lg:block  pl-4">
                   <Rightbar />
             </aside>
       

@@ -144,7 +144,7 @@ const Learning = () => {
                         <div className='hidden lg:block '>
                               < Navbar />
                         </div>
-                        <div className='flex flex-col lg:flex-row justify-between px-20 mt-5'>
+                        <div className='flex flex-col lg:flex-row justify-between px-20'>
                               {/* Left Sidebar */}
                               <aside className="w-[25%] hidden lg:block relative " >
                                     <LeftSidebar />

@@ -12,7 +12,7 @@ import DashboardSidebar from '../../Component/DashboardSidebar'
         <DashboardNavbar />
       </div>
 
-        <div className="flex  lg:pl-30 lg:pr-20">
+        <div className="flex  lg:px-20">
              {/* Left Sidebar */}
      
         <aside className="w-[25%] hidden   lg:block">

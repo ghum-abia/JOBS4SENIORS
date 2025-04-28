@@ -13,7 +13,6 @@ function DashboardSidebar() {
     const [notifications, setNotifications] = useState(3); // Notification count
     const [messages, setMessages] = useState(2); // Message count
 
-
     const location = useLocation(); // Get current path
     const menuItems = [
         { name: "Home", path: "/dashboard", icon: <RiHome5Fill size={20} /> },
@@ -54,7 +53,7 @@ function DashboardSidebar() {
                                     >
                                         {item.icon}
                                         {item.id === "notifications" && notifications > 0 && (
-                                            <span className="absolute top-4 right-2 bg-red-500 text-white text-xs font-bold w-4 h-4  flex items-center justify-center rounded-full">
+                                            <span className="absolute top-4 right-2 bg-red-500 text-white text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">
                                                 {notifications}{'+'}
                                             </span>
                                         )}

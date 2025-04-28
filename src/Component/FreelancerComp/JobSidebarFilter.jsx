@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { jobListings } from "./JobListings";
+import { PropTypes } from 'prop-types';
 
 const experienceLevels = ["No-experience", "Fresher", "Intermediate", "Expert"];
 const datePostedOptions = ["All", "Last Hour", "Last 24 Hours", "Last 7 Days", "Last 30 Days"];
@@ -114,4 +115,6 @@ export default function SidebarFilter({ applyFilters }) {
   );
 };
 
-
+SidebarFilter.propTypes = {
+  applyFilters: PropTypes.any,
+};

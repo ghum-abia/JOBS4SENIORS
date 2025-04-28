@@ -49,6 +49,13 @@ function App() {
           <Route path="/Faqs" element={<Faqs />} />
           <Route path="/Forgetpassword" element={<Forgetpassword />} />
           <Route path="/Proposal" element={<Proposal />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/recruiter/dashoard" element={<RecuiterDashoard />} />
+          <Route path="/offer/page" element={<Offerpage />} />
+          <Route path="/faqs" element={<Faqs />} />
+          <Route path="/forgetpassword" element={<Forgetpassword />} />
+          <Route path="/proposal" element={<Proposal />} />
           <Route path="/proposal/:slug" element={<ProposalDetail />} />
           <Route path="/Job/:id" element={<JobDetail />} />
           <Route path="/SendProposal/:id" element={<SendProposals />} />
