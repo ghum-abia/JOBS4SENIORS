@@ -59,7 +59,7 @@ function App() {
           <Route path="/notifications" element={<NotificationPage />} />
           <Route path="/messages" element={<Chat />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="*" element={<div>404: Route Not Found</div>} />
+          {/* <Route path="*" element={<div>404: Route Not Found</div>} /> */}
           <Route path="/community" element={<CommunityLayout />}>
               <Route path=":slug" element={<CommunityPost />} />
               <Route path="/community/:slug/post/:postId" element={<CommunityPostDetail />} />
