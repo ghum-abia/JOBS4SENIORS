@@ -7,14 +7,14 @@ import { Link } from "react-router";
 import { MdStarRate as StarRating } from "react-icons/md";
 
 
-export const Card = ({ title, topic, lecturer, duration, rating, category, progress, imageurl }) => {
+export const Card = ({ title, topic, lecturer, duration, rating, category, progress, thumbnail, videourl }) => {
       return (
             <>
                   <div className="max-w-sm rounded-t-2xl shadow-sm ">
                         <div className="relative grid items-center">
-                              <img className="rounded-t-2xl " src={imageurl} alt="" />
+                              <video className="rounded-t-2xl h-40 object-cover" src={thumbnail} alt="" />
                               <div className="absolute justify-center flex w-full">
-                                    <Link to='/dashboard/learning/lecture' state={{ title: title, topic: topic, lecturer: lecturer, duration: duration, rating: rating, progress: progress, imageurl: imageurl, category: category }} >
+                                    <Link to='/dashboard/learning/lecture' state={{ title: title, topic: topic, lecturer: lecturer, duration: duration, rating: rating, progress: progress, videourl:videourl, category: category }} >
                                           <FaPlay className="text-[#ffffffdc] w-10 h-10" />
                                     </Link>
                               </div>
@@ -46,6 +46,7 @@ Card.propTypes = {
       duration: PropTypes.string.isRequired,
       rating: PropTypes.number.isRequired,
       progress: PropTypes.number.isRequired,
-      imageurl: PropTypes.isRequired,
-      category: PropTypes.isRequired
+      thumbnail: PropTypes.any.isRequired,
+      videourl: PropTypes.any.isRequired,
+      category: PropTypes.any.isRequired
 }
