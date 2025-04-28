@@ -5,7 +5,7 @@ import avatar from "../../assets/learning/pexels-steve-1266808.jpg"
 import { MdStarRate as StarRating } from "react-icons/md";
 import { RatingProgress } from "../RatingProgress.jsx";
 
-export const VideoCard = ({ title, topic, lecturer, category, /*duration,*/  rating, /*progress,*/ imageurl }) => {
+export const VideoCard = ({ title, topic, lecturer, category, /*duration,*/  rating, /*progress,*/ videourl }) => {
       const [selection, setSelection] = useState("overview");
       const [newMessage, setNewMessage] = useState('')
       let handleSelection = (e) => {
@@ -20,7 +20,7 @@ export const VideoCard = ({ title, topic, lecturer, category, /*duration,*/  rat
                   <div className="bg-transparent rounded-t-4xl  w-[100%] h-full">
                         <div className=" rounded-t-4xl bg-black">
                               { }
-                              <video src="/tst.mp4" className="rounded-t-2xl  h-70 w-full object-contain" controls/>
+                              <video src={videourl} className="rounded-t-2xl  h-70 w-full object-contain" controls/>
                         </div>
                         <div className=" py-2 grid gap-3">
                               <div className="text-black font-bold">{title} - {topic}</div>
@@ -225,5 +225,5 @@ VideoCard.propTypes = {
       rating: PropTypes.number.isRequired,
       progress: PropTypes.number.isRequired,
       category: PropTypes.number.isRequired,
-      imageurl: PropTypes.string.isRequired
+      videourl: PropTypes.string.isRequired
 }

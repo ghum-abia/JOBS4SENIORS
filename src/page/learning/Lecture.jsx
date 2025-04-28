@@ -31,7 +31,7 @@ const Learning = () => {
 
 
                                     <div className="w-[97%] " >
-                                          <VideoCard imageurl={data.imageurl} title={data.title} topic={data.topic} lecturer={data.lecturer} duration={data.duration} rating={data.rating} category={data.category} progress={data.progress} />
+                                          <VideoCard videourl={data.videourl} title={data.title} topic={data.topic} lecturer={data.lecturer} duration={data.duration} rating={data.rating} category={data.category} progress={data.progress} />
                                     </div>
 
 
