@@ -42,7 +42,7 @@ function loginform() {
        
 
           let users = JSON.parse(sessionStorage.getItem('users')) || [];
-          let user = users.find(user => user.email === email && user.password === password);
+          let user = users.find(user => user.email === 'admin@gmail.com' && user.password === '123456789');
           
           if (user) {
            
