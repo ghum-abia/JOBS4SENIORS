@@ -48,7 +48,7 @@ function Registration() {
       toast.success('SiginIn Successful!!');
       
                 setInterval(() => {
-                  window.location = './login';
+                  window.location = './Login';
                 }, 2000);
     },
   });
