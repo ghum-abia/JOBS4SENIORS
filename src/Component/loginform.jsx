@@ -41,18 +41,22 @@ function loginform() {
           const { email, password } = values;
        
 
-          let users = JSON.parse([
+          let users = JSON.parse(
               {
+                  "firstname":"Admin",
                   "email":"admin@gmail.com",
                   "password":"123456789",
+                  "confirm_password":"123456789",
                   "role":"user"
               },
               {
+                  "firstname":"Recruiter",
                   "email":"recruiter@gmail.com",
                   "password":"123456789",
+                  "confirm_password":"123456789",
                   "role":"recruiter"
               }
-          ]) || [];
+          ) || [];
           let user = users.find(user => user.email === 'admin@gmail.com' && user.password === '123456789');
           
           if (user) {
