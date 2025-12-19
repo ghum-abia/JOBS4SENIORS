@@ -13,15 +13,12 @@ import { useNavigate } from "react-router";
 
 
 function loginform() {
-
     const navigate = useNavigate();
-
-     const [showPassword, setShowPassword] = useState(false);
-
+    const [showPassword, setShowPassword] = useState(false);
      
-        const togglePassword = () => {
-            setShowPassword(!showPassword);
-        }; 
+    const togglePassword = () => {
+        setShowPassword(!showPassword);
+    }; 
 
     const formik = useFormik({
         initialValues: {
@@ -29,56 +26,52 @@ function loginform() {
           password: '',
         },
         validationSchema: Yup.object({
-    
-    
           email: Yup.string().email('Invalid email address').required('*Required'),
           password: Yup.string()
-            .max(15, 'Must be characters or less')
+            .max(15, 'Must be 15 characters or less')
             .required('*Required'),
         }),
         onSubmit: (values) => {
-
           const { email, password } = values;
        
-
-          let users = JSON.parse(`[
-  {
-    "firstname": "Admin",
-    "email": "admin@gmail.com",
-    "password": "123456789",
-    "confirm_password": "123456789",
-    "role": "user"
-  },
-  {
-    "firstname": "Recruiter",
-    "email": "recruiter@gmail.com",
-    "password": "123456789",
-    "confirm_password": "123456789",
-    "role": "recruiter"
-  }
-]`) || [];
-
-          let user = users.find(user => user.email === 'admin@gmail.com' && user.password === '123456789');
+          // Hardcoded users
+          let users = [
+            {
+              firstname: "Admin",
+              email: "admin@gmail.com",
+              password: "123456789",
+              role: "user"
+            },
+            {
+              firstname: "Recruiter",
+              email: "recruiter@gmail.com",
+              password: "123456789",
+              role: "recruiter"
+            }
+          ];
+          
+          // Find user with matching email AND password from form values
+          let user = users.find(u => u.email === email && u.password === password);
           
           if (user) {
-           
-            
-            if (user.Role === 'user') {
-              toast.success('Login Sucessful!!');
+            // Check role (lowercase to match data)
+            if (user.role === 'user') {
+              toast.success('Login Successful!!');
               navigate('/dashboard');
-            } else if (user.Role === 'recruiter') {
+            } else if (user.role === 'recruiter') {
+              toast.success('Login Successful!!');
               navigate('/RecruiterDashboard');
             }
           } else {
             toast.error('Wrong email or password');
           }
-        
-
-
         },
-      });
+    });
 
-
+    return formik;
+    console.log(formix, users, user);
+    // Don't forget to return formik if needed
+}
   return (
     <div>
         <div className='  flex justify-between '>  
