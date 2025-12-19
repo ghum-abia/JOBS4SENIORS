@@ -44,7 +44,7 @@ function RegistrationForm() {
         }),
         onSubmit: (values) => {
           sessionStorage.setItem('user', JSON.stringify(values));
-          toast.success('SiginIn Successful!!');
+          toast.success('Sigin Successful!!');
           setInterval(() => {
             window.location = './login';
           }, 2000);
