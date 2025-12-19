@@ -1,13 +1,14 @@
 import Navbar from "../../Component/DashboardNavbar.jsx";
 import LeftSidebar from "../../Component/DashboardSidebar.jsx";
 import { Card } from "../../Component/learning/CourseCard.jsx";
-import image from "../../assets/learning/lecture.jpg"
+import image from "/tst.mp4"
 
 const Learning = () => {
       let videos = [
             {
                   id: 1,
-                  imageurl: { image },
+                  thumbnail: { image },
+                  videourl: "/tst.mp4",
                   category: 'law',
                   title: 'Audit Law Forensics',
                   topic: 'A Standard Operating Procedure',
@@ -18,7 +19,8 @@ const Learning = () => {
             },
             {
                   id: 2,
-                  imageurl: { image },
+                  thumbnail: { image },
+                  videourl: "/tst.mp4",
                   title: 'Audit Law Forensics',
                   category: 'law',
                   topic: 'A Standard Operating Procedure',
@@ -29,7 +31,8 @@ const Learning = () => {
             },
             {
                   id: 3,
-                  imageurl: { image },
+                  thumbnail: { image },
+                  videourl: "/tst.mp4",
                   title: 'Audit Law Forensics',
                   category: 'law',
                   topic: 'A Standard Operating Procedure',
@@ -40,7 +43,8 @@ const Learning = () => {
             },
             {
                   id: 4,
-                  imageurl: { image },
+                  thumbnail: { image },
+                  videourl: "/tst.mp4",
                   title: 'Audit Law Forensics',
                   category: 'law',
                   topic: 'A Standard Operating Procedure',
@@ -51,7 +55,8 @@ const Learning = () => {
             },
             {
                   id: 5,
-                  imageurl: { image },
+                  thumbnail: { image },
+                  videourl: "/tst.mp4",
                   title: 'Audit Law Forensics',
                   category: 'law',
                   topic: 'A Standard Operating Procedure',
@@ -62,7 +67,8 @@ const Learning = () => {
             },
             {
                   id: 6,
-                  imageurl: { image },
+                  thumbnail: { image },
+                  videourl: "/tst.mp4",
                   title: 'Audit Law Forensics',
                   category: 'law',
                   topic: 'A Standard Operating Procedure',
@@ -73,7 +79,8 @@ const Learning = () => {
             },
             {
                   id: 7,
-                  imageurl: { image },
+                  thumbnail: { image },
+                  videourl: "/tst.mp4",
                   title: 'Audit Law Forensics',
                   category: 'law',
                   topic: 'A Standard Operating Procedure',
@@ -84,7 +91,8 @@ const Learning = () => {
             },
             {
                   id: 8,
-                  imageurl: { image },
+                  thumbnail: { image },
+                  videourl: "/tst.mp4",
                   title: 'Audit Law Forensics',
                   category: 'law',
                   topic: 'A Standard Operating Procedure',
@@ -95,7 +103,8 @@ const Learning = () => {
             },
             {
                   id: 9,
-                  imageurl: { image },
+                  thumbnail: { image },
+                  videourl: "/tst.mp4",
                   title: 'Audit Law Forensics',
                   category: 'law',
                   topic: 'A Standard Operating Procedure',
@@ -106,7 +115,8 @@ const Learning = () => {
             },
             {
                   id: 10,
-                  imageurl: { image },
+                  thumbnail: { image },
+                  videourl: "/tst.mp4",
                   title: 'Audit Law Forensics',
                   category: 'law',
                   topic: 'A Standard Operating Procedure',
@@ -117,7 +127,8 @@ const Learning = () => {
             },
             {
                   id: 11,
-                  imageurl: { image },
+                  thumbnail: { image },
+                  videourl: "/tst.mp4",
                   title: 'Audit Law Forensics',
                   category: 'law',
                   topic: 'A Standard Operating Procedure',
@@ -128,7 +139,8 @@ const Learning = () => {
             },
             {
                   id: 12,
-                  imageurl: { image },
+                  thumbnail: { image },
+                  videourl: "/tst.mp4",
                   title: 'Audit Law Forensics',
                   category: 'law',
                   topic: 'A Standard Operating Procedure',
@@ -144,7 +156,7 @@ const Learning = () => {
                         <div className='hidden lg:block '>
                               < Navbar />
                         </div>
-                        <div className='flex flex-col lg:flex-row justify-between px-20 mt-5'>
+                        <div className='flex flex-col lg:flex-row justify-between px-20'>
                               {/* Left Sidebar */}
                               <aside className="w-[25%] hidden lg:block relative " >
                                     <LeftSidebar />
@@ -158,7 +170,7 @@ const Learning = () => {
 
                                     <div className=" grid grid-cols-3  gap-y-3 gap-x-3 " >
                                           {videos.map((video) => (
-                                                <Card key={video.id} imageurl={video.imageurl.image} title={video.title} topic={video.topic} lecturer={video.name} duration={video.duration} rating={video.rating} category={video.category} progress={video.progress} />
+                                                <Card key={video.id} videourl={video.videourl} thumbnail={video.thumbnail.image} title={video.title} topic={video.topic} lecturer={video.name} duration={video.duration} rating={video.rating} category={video.category} progress={video.progress} />
                                           ))}
                                     </div>
 

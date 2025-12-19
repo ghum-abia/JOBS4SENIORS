@@ -7,19 +7,19 @@ import DashboardSidebar from '../../Component/DashboardSidebar'
   return (
 
     <div>
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-gray-100 gap-4 pb-10 h-screen pt-20">
         <DashboardNavbar />
 
-        <div className="flex  pt-25 px-6">
+        <div className="flex lg:pl-30 lg:pr-20">
              {/* Left Sidebar */}
      
-        <aside className="w-1/5 hidden   lg:block">
+        <aside className="w-[25%] hidden   lg:block">
         <DashboardSidebar />
        
         </aside>
     
             {/* Main Content */}
-            <div className=" w-screen lg:w-4/5 px-6">
+            <div className=" w-screen lg:w-[78%]">
             <Bookmarks />
                  
             </div>

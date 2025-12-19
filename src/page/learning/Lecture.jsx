@@ -5,7 +5,7 @@ import { VideoCard } from "../../Component/learning/VideoCard.jsx";
 import { Module } from "../../Component/learning/Module.jsx";
 import { MdArrowForward } from "react-icons/md";
 
-const Learning = () => {
+const Lecture = () => {
       let location = useLocation();
       let data = location.state;
       let moduleComplete = false
@@ -17,7 +17,7 @@ const Learning = () => {
                               < Navbar />
                         </div>
 
-                        <div className='flex  justify-between px-20 mt-5 '>
+                        <div className='flex  justify-between px-20 '>
                               {/* Left Sidebar */}
                               <aside className="w-[25%] hidden lg:block" >
                                     <LeftSidebar />
@@ -31,7 +31,7 @@ const Learning = () => {
 
 
                                     <div className="w-[97%] " >
-                                          <VideoCard imageurl={data.imageurl} title={data.title} topic={data.topic} lecturer={data.lecturer} duration={data.duration} rating={data.rating} category={data.category} progress={data.progress} />
+                                          <VideoCard videourl={data.videourl} title={data.title} topic={data.topic} lecturer={data.lecturer} duration={data.duration} rating={data.rating} category={data.category} progress={data.progress} />
                                     </div>
 
 
@@ -81,4 +81,4 @@ const Learning = () => {
       )
 }
 
-export default Learning;
+export default Lecture;

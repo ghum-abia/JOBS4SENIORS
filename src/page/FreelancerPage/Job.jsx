@@ -1,4 +1,3 @@
-import React from 'react'
 import DashboardNavbar from '../../Component/DashboardNavbar'
 import Jobs from '../../Component/FreelancerComp/jobs'
 
@@ -10,7 +9,7 @@ export default function Job() {
         <DashboardNavbar />
         </div>
         
-        <div  className='flex  lg:pl-30 lg:pr-20'>
+        <div  className='flex  lg:px-20'>
      
             <div className="w-full ">
             <Jobs />

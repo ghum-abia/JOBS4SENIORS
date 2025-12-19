@@ -72,7 +72,7 @@ function herosection() {
                         </div>
                      </div>
             </div>
-            <div className='pt-15'>
+            <div className='pt-15' id='check'>
                 <div className='font-bold lg:text-[32px] text-[#15411F] pl-3 py-3 grid place-content-center md:place-content-start'>
                 Why choose us?
                 </div>
@@ -134,7 +134,7 @@ function herosection() {
 
     <div className='grid lg:flex lg:flex-row lg:pl-30 pt-20 lg:pr-30 '>
         <div className='lg:basis-[40vw] grid place-content-center font-bold text-[48px]'>
-            <div className='text-center text[#333333]'>Frequently asked Questions</div>
+            <div id='faq' className='text-center text[#333333]'>Frequently asked Questions</div>
             <div className='grid place-content-center -mt-[50px]'>
                 
                 <div className=' '> <img className='h-[600px]' src={image1} alt="" /></div>
@@ -203,8 +203,8 @@ Sign Up Now – It’s Free!
 
 
  
-     <div className='bg-[#061A0A] pt-20 md:pl-[100px]'> 
-                <div className='flex items-center'>
+     {/* <div className='bg-[#061A0A] pl-8 pt-20  md:pl-[100px]'> 
+                <div className='flex pb-2 items-center'>
                     <img className='w-[43px] h-[30px] pr-2' src="/logowhite.svg"  alt="" />
                     <div className='text-white font-semibold pt-2'>
                     JOBS4SENIORS
@@ -215,15 +215,15 @@ Sign Up Now – It’s Free!
 
         <div className='w-[360px] grid content-center'>
           
-            <div className='text-white '>
+            <div className='text-white pb-2'>
             Explore job opportunities, gain new skills, and build a brighter future beyond civil service.
             </div>
         </div>
-        <div className='border-2 rounded-2xl w-[484px]  content-center p-2 border-[#757575]'>
-          <form action="" className=' flex justify-between '>
-             <input type="text" placeholder='Subscribe to our newsletter'  className='text-white border-none w-[484px] pl-6'/>
-             <button className='bg-[#F5F5F5] rounded-xl text-[ #15411F] p-6 '>
-             Subscribe
+        <div className='border-2 rounded-2xl pb-2 md:w-[484px] w-[200px]  content-center lg:p-2 border-[#757575]'>
+          <form action="" className=' flex justify-between gap-14'>
+             <input type="text" placeholder='Subscribe to our newsletter'  className='text-white lg-text[16px]  text-[12px] border-none md:w-[484px] w-[200px] pl-6'/>
+             <button className='bg-[#F5F5F5] rounded-xl text-[ #15411F]  p-3 mt-2 lg:p-6 '>
+             Subscribes
              </button>
           </form>
         </div>
@@ -239,24 +239,7 @@ Sign Up Now – It’s Free!
 
     <div className='bg-[#041608] text-[] text-[#757575] text-center text-[12px] p-2'>
     All Rights Reserved. Copyright 2025. Jobs4seniors.com
-    </div>  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    </div>   */}
     </>
   )
 }

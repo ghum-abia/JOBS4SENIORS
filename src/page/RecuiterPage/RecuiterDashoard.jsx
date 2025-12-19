@@ -1,8 +1,8 @@
-import React from 'react'
 
 const RecuiterDashoard = () => {
   return (
-    <div>RecuiterDashoard</div>
+    <div className='text-black'>RecuiterDashoard</div>
+    
   )
 }
 

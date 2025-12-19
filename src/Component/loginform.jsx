@@ -75,12 +75,12 @@ function loginform() {
                         <img className='h-[600px]' src={image6} alt="" />
                     </div>
                     <div className='md:w-[512px] w-full p-3 text-center md:pr-[100px] content-center'>
-                        <div className='text-[#15411F] font-bold text-[16px] md:text-[32px]'>
+                        <div className='text-[#15411F] font-bold text-[16px] mt-8 md:text-[32px]'>
                         Welcome Back
                         </div>
                     
         
-                        <div className='pt-10 w-full '>
+                        <div className='pt-4 lg:pt-10 w-full '>
                             <form action='' onSubmit={formik.handleSubmit}>
                     
                             <div className='mb-10'>

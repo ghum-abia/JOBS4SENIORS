@@ -25,13 +25,13 @@ const MobileMenu = () => {
                     <div onClick={toggleMenu}  className="absolute  top-5 right-0 h-screen w-screen bg-white shadow-lg rounded-md pl-10">
                         <ul className="flex flex-col p-4">
                             <li className="py-2 border-b border-gray-200">
-                               <Link to='/Registration' className="text-gray-700">Home</Link>
+                               <Link to='/' className="text-gray-700">Home</Link>
                             </li>
                             <li className="py-2 border-b border-gray-200">
-                                <Link to='/Offerpage'> What we offer </Link>
+                                <div>  <a href="#check">What we offer</a></div>
                             </li>
                             <li className="py-2 border-b border-gray-200">
-                                          <div><Link to='/Faqs'> FAQs </Link></div>
+                            <div> <a href="#faq"> FAQs </a></div>
                             </li>
                            
                         </ul>

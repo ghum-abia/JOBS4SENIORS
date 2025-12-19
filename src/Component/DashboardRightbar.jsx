@@ -1,14 +1,30 @@
 import React from 'react'
-
+import { Link } from 'react-router'
 import premuimimg from '../assets/dashboard/premuimimg.png'
 import stevejob from '../assets/dashboard/stevejob.png'
 import { BsFilePlus } from 'react-icons/bs';
+import { useCommunityStore } from '../store/useCommunityStore';
 
 
 function DashboardRightbar() {
+
+
+    const { communities, selectedCommunity, setSelectedCommunity, addCommunity  } = useCommunityStore();
+
+    const handleAddCommunity = () => {
+        const newCommunity = {
+          id: Date.now(),
+          name: `Community ${communities.length + 1}`,
+          slug: `community-${communities.length + 1}`,
+          icon: '🌐',
+        };
+        addCommunity(newCommunity);
+        setSelectedCommunity(newCommunity);
+      };
+
   return (
     <div>
-          <aside className="">
+          <div className="">
                 <div className=' bg-white  shadow-md rounded-2xl'>
                     <img src={premuimimg} alt="" />
                 </div>
@@ -52,23 +68,39 @@ function DashboardRightbar() {
                       </div>
                   </div>
                   <div className=' bg-white mt-4  shadow-md rounded-2xl pl-2 p-1'>
-                    <ul>
-                            <li className="p-1  hover:bg-gray-200 rounded-md font-normal text-[14px] text-[#666666] cursor-pointer">UX Design</li>
-                            <div className='flex justify-between hover:bg-gray-200 p-1 rounded-md cursor-pointer' >
-                            <li className="  rounded-md font-normal text-[14px] text-[#666666] ">UI Design </li>
-                            <span className="text-[#FFFFFF] bg-[#FF1930] text-[11px]  content-center px-2 rounded-2xl">+10</span>
-                            </div>
-        
-                    </ul>
-                    <div className='flex items-center p-1 cursor-pointer '>
-                        <div className=' font-normal text-[14px] text-[#666666]'><BsFilePlus /></div>
-                        <div className=' font-normal text-[14px] text-[#666666] pl-2'>Add new community</div>
-                    </div>
+                  {communities.map((community) => (
+            <div key={community.id} className="mb-2">
+              <div
+                onClick={() => setSelectedCommunity(community)}
+                className={`w-full text-left font-normal text-[14px] px-3 py-2 rounded ${
+                  selectedCommunity?.id === community.id
+                    ? ' text-flag-green'
+                    : 'hover:bg-gray-200'
+                }`}
+              >
+                <Link
+                  to={`/community/${community.slug}`}
+                  className="flex items-center gap-2"
+                >
+                  <span>{community.icon}</span>
+                  <span>{community.name}</span>
+                </Link>
+                </div>
+            </div>
+          ))}
+        </div>
+
+        <button
+          onClick={handleAddCommunity}
+          className="mt-4 w-full hidden bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition"
+        >
+          + Add Community
+        </button>
                  
                  
                 </div>
-                </aside>
-    </div>
+                </div>
+
   )
 }
 

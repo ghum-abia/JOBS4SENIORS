@@ -18,8 +18,9 @@ import { BsSend, BsCameraVideo } from "react-icons/bs";
 import { SlCalender } from "react-icons/sl";
 import { TbNotes } from "react-icons/tb";
 import Feed from './Feed'
+import CommunityPost from './CommunityPost'
 
-function dashboard() {
+function CommnunityPostlist() {
   const [text, setText] = useState("");
   return (
     <div>
@@ -29,7 +30,7 @@ function dashboard() {
       <DashboardNavbar />
      
       
-      <div className="flex lg:px-20">
+      <div className="flex lg:pl-30 lg:pr-20">
         {/* Left Sidebar */}
      
         <aside className="w-[25%] hidden   lg:block">
@@ -41,11 +42,11 @@ function dashboard() {
 
         
        
-            <main className=" w-screen lg:w-[55%] ">
+            <main className=" w-screen lg:w-3/5 ">
               {/* Post Input */}
 
               <div className="  mb-4 mr-4">
-                <Feed />
+                <CommunityPost />
                 </div>
 
 
@@ -119,7 +120,7 @@ function dashboard() {
             </main>
 
             {/* Right Sidebar */}
-            <aside className=" w-[20%] hidden lg:block  pl-4">
+            <aside className=" w-1/5 hidden lg:block  ">
                   <Rightbar />
             </aside>
       
@@ -131,4 +132,4 @@ function dashboard() {
   )
 }
 
-export default dashboard
+export default  CommnunityPostlist

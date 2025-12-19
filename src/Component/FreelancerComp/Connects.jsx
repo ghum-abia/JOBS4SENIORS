@@ -65,7 +65,7 @@ export default function Connects() {
         <h1 className="text-2xl font-bold text-gray-800 mb-6">Network</h1>
         
         <div className="bg-white rounded-lg shadow-sm overflow-hidden mb-8">
-          <div className="flex w-[600px] border-b">
+          <div className="flex w-full border-b">
             <button
               className={`flex-1 py-4 font-medium text-center ${
                 activeTab === "received" 
