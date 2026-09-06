@@ -59,14 +59,18 @@ function DashboardSidebar() {
                 <li className=" pl-3 ">Learning</li>
               </div>
             </Link>
-            <div className='flex  hover:bg-gray-200 rounded-md font-normal text-[14px] text-[#666666]  p-2'>
-              <MdInsertChartOutlined className='' size={20} />
-              <li className=" pl-3 ">Insights</li>
-            </div>
-            <div className='flex  hover:bg-gray-200 rounded-md font-normal text-[14px] text-[#666666]  p-2'>
-              <TiUserAddOutline className='' size={20} />
-              <li className=" pl-3 ">Find colleagues</li>
-            </div>
+            <Link to="/insights">
+              <div className='flex  hover:bg-gray-200 rounded-md font-normal text-[14px] text-[#666666]  p-2'>
+                <MdInsertChartOutlined className='' size={20} />
+                <li className=" pl-3 ">Insights</li>
+              </div>
+            </Link>
+            <Link to="/connect">
+              <div className='flex  hover:bg-gray-200 rounded-md font-normal text-[14px] text-[#666666]  p-2'>
+                <TiUserAddOutline className='' size={20} />
+                <li className=" pl-3 ">Find colleagues</li>
+              </div>
+            </Link>
             <Link to='/bookmark'>
               <div className='flex  hover:bg-gray-200 rounded-md font-normal text-[14px] text-[#666666]  p-2'>
                 <CiBookmarkMinus className='' size={20} />

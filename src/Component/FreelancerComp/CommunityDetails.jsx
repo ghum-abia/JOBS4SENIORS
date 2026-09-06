@@ -69,7 +69,7 @@ export default function CommunityDetail() {
           />
           <button
             onClick={handleSendComment}
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            className="bg-[#15411F] text-white px-4 py-2 rounded hover:bg-green-900 transition-colors"
           >
             Send
           </button>

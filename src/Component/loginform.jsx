@@ -10,6 +10,8 @@ import { BsEyeSlashFill } from "react-icons/bs";
 import { IoEyeSharp } from "react-icons/io5";
 import { useNavigate } from "react-router";
 
+import { login } from '../api/authService';
+
 function Loginform() {  // Changed to capital L (React component naming convention)
     const navigate = useNavigate();
     const [showPassword, setShowPassword] = useState(false);
@@ -26,42 +28,37 @@ function Loginform() {  // Changed to capital L (React component naming conventi
         validationSchema: Yup.object({
           email: Yup.string().email('Invalid email address').required('*Required'),
           password: Yup.string()
-            .max(15, 'Must be 15 characters or less')
+            .min(8, 'Must be at least 8 characters')
             .required('*Required'),
         }),
-        onSubmit: (values) => {
-          const { email, password } = values;
-       
-          // Hardcoded users
-          let users = [
-            {
-              firstname: "Admin",
-              email: "admin@gmail.com",
-              password: "123456789",
-              role: "user"
-            },
-            {
-              firstname: "Recruiter",
-              email: "recruiter@gmail.com",
-              password: "123456789",
-              role: "recruiter"
-            }
-          ];
-          
-          // Find user with matching email AND password from form values
-          let user = users.find(u => u.email === email && u.password === password);
-          
-          if (user) {
-            // Check role (lowercase to match data)
-            if (user.role === 'user') {
-              toast.success('Login Successful!!');
-              navigate('/dashboard');
-            } else if (user.role === 'recruiter') {
-              toast.success('Login Successful!!');
-              navigate('/RecruiterDashboard');
-            }
-          } else {
-            toast.error('Wrong email or password');
+        onSubmit: async (values, { setSubmitting }) => {
+          try {
+            const data = await login({
+              email: values.email.trim().toLowerCase(),
+              password: values.password,
+            });
+
+            toast.success('Login Successful!!');
+
+            const roles = data?.user?.accountTypes || [];
+            const isRecruiter = roles.includes('RECRUITER') || data?.user?.role === 'recruiter';
+
+            setTimeout(() => {
+              if (isRecruiter) {
+                navigate('/RecruiterDashboard');
+              } else {
+                navigate('/dashboard');
+              }
+            }, 1000);
+          } catch (err) {
+            const message =
+              err.response?.data?.message ||
+              err.response?.data?.data?.message ||
+              err.message ||
+              'Wrong email or password';
+            toast.error(message);
+          } finally {
+            setSubmitting(false);
           }
         },
     });
@@ -136,10 +133,13 @@ function Loginform() {  // Changed to capital L (React component naming conventi
                         </div>
 
                         <button
-                            className='h-10 mt-2 text-lg font-medium text-[#F3F3F3] bg-[#15411F] text-center w-full rounded cursor-pointer'
+                            className={`h-10 mt-2 text-lg font-medium text-[#F3F3F3] bg-[#15411F] text-center w-full rounded transition ${
+                              formik.isSubmitting ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer hover:bg-[#1b5529]'
+                            }`}
                             type='submit'
+                            disabled={formik.isSubmitting}
                         >
-                            Login
+                            {formik.isSubmitting ? 'Logging in...' : 'Login'}
                         </button>
                     </form>
                 </div>

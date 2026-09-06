@@ -11,7 +11,10 @@ import * as Yup from 'yup';
 import { IoEyeSharp } from 'react-icons/io5';
 import { BsEyeSlashFill } from 'react-icons/bs';
 
+import { register } from '../api/authService';
+
 function Registration() {
+  const navigate = useNavigate();
   const [Role, setRole] = useState("user");
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
@@ -28,28 +31,40 @@ function Registration() {
     },
     validationSchema: Yup.object({
       firstname: Yup.string()
-        .max(15, 'Must be 15 characters or less')
+        .max(50, 'Must be 50 characters or less')
         .required('*Required'),
       email: Yup.string().email('Invalid email address').required('*Required'),
       password: Yup.string()
-        .max(15, 'Must be 15 characters or less')
+        .min(8, 'Must be at least 8 characters')
         .required('*Required'),
       confirmPassword: Yup.string()
         .oneOf([Yup.ref('password'), null], 'Passwords must match')
         .required('*Required'),
     }),
-    onSubmit: (values) => {
-      const userData = { ...values, Role };
+    onSubmit: async (values, { setSubmitting }) => {
+      try {
+        const payload = {
+          fullName: values.firstname.trim(),
+          email: values.email.trim().toLowerCase(),
+          password: values.password,
+          accountType: Role === 'recruiter' ? 'RECRUITER' : 'FREELANCER',
+        };
 
-      // Get existing users from session storage
-      let users = JSON.parse(sessionStorage.getItem("users")) || [];
-      users.push(userData);
-      sessionStorage.setItem("users", JSON.stringify(users));
-      toast.success('SiginIn Successful!!');
-      
-                setInterval(() => {
-                  window.location = './Login';
-                }, 2000);
+        await register(payload);
+        toast.success('Account created successfully! Redirecting to login...');
+        setTimeout(() => {
+          navigate('/Login');
+        }, 1500);
+      } catch (err) {
+        const message =
+          err.response?.data?.message ||
+          err.response?.data?.data?.message ||
+          err.message ||
+          'Registration failed. Please try again.';
+        toast.error(message);
+      } finally {
+        setSubmitting(false);
+      }
     },
   });
 
@@ -136,7 +151,15 @@ function Registration() {
               </div>
               {formik.touched.confirmPassword && formik.errors.confirmPassword && <div>{formik.errors.confirmPassword}</div>}
 
-              <button type='submit' className='h-10 mt-5 bg-[#15411F] text-white w-full rounded'>Register</button>
+              <button
+                type='submit'
+                disabled={formik.isSubmitting}
+                className={`h-10 mt-5 bg-[#15411F] text-white w-full rounded font-semibold transition ${
+                  formik.isSubmitting ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#1b5529]'
+                }`}
+              >
+                {formik.isSubmitting ? 'Creating account...' : 'Register'}
+              </button>
             </form>
             <p className='pt-3'>Already have an account? <Link to='/Login' className='text-[#15411F]'>Sign in</Link></p>
           </div>
