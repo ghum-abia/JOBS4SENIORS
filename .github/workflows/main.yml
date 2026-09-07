@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - main
 
 jobs:
   deploy:
@@ -21,10 +22,11 @@ jobs:
 
       - name: Install & Build
         env:
+          VITE_API_BASE_URL: ${{ secrets.VITE_API_BASE_URL || secrets.VITE_API_URL }}
           VITE_API_URL: ${{ secrets.VITE_API_URL }}
           VITE_APP_NAME: ${{ secrets.VITE_APP_NAME }}
         run: |
-          npm ci
+          npm ci --legacy-peer-deps
           npm run build
 
       - name: Setup SSH key
