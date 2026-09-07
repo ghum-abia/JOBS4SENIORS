@@ -37,6 +37,9 @@ jobs:
           ssh-keyscan -p ${{ secrets.SSH_PORT }} -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts 2>/dev/null || true
           echo "StrictHostKeyChecking no" >> ~/.ssh/config
           echo "UserKnownHostsFile /dev/null" >> ~/.ssh/config
+          echo "ServerAliveInterval 30" >> ~/.ssh/config
+          echo "ServerAliveCountMax 10" >> ~/.ssh/config
+          echo "TCPKeepAlive yes" >> ~/.ssh/config
           chmod 600 ~/.ssh/config
 
       - name: Create target directory on server
